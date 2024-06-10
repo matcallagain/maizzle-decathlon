@@ -1,0 +1,32 @@
+<script props>
+  module.exports = {
+    align: {
+      left: 'text-left',
+      center: 'text-center',
+      right: 'text-right',
+    }[props.align],
+    href: props['href'] || '/',
+    msoPt: props['mso-pt'] || '16px',
+    msoPb: props['mso-pb'] || '30px',
+    py: props['p-y'] || 'py-4',
+    px: props['p-x'] || 'px-6',
+    fontColor: props['font-color'] || 'text-slate-50',
+    bgColor: props['bg-color'],
+  }
+</script>
+
+<div class="{{ align }}">
+  <a
+    attributes
+    href="{{ href }}"
+    class="inline-block {{py}} {{px}} text-base leading-none {{fontColor}} {{bgColor}} [text-decoration:none]"
+  >
+    <outlook>
+      <i class="mso-font-width-[150%]" style="mso-text-raise: {{ msoPb }};" hidden>&emsp;</i>
+    </outlook>
+    <span style="mso-text-raise: {{ msoPt }}"><content /></span>
+    <outlook>
+      <i class="mso-font-width-[150%]" hidden>&emsp;&#8203;</i>
+    </outlook>
+  </a>
+</div>

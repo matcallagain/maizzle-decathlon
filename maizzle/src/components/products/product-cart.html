@@ -1,0 +1,36 @@
+<script props>
+  module.exports = {
+    brand: props.brand || "DECATHLON",
+    desc: props.desc || "Pork tenderloin bacon ham landjaeger strip steak t-bone.",
+    size: props.size || "56",
+    color: props.color || "Black",
+    oldPrice: props["old-price"] || "",
+    currentPrice: props["current-price"] || "6999€",
+  };
+</script>
+
+<table class="fl" cellpadding="0" cellspacing="0" border="0" width="100%">
+  <tr>
+    <!-- Packshot Product -->
+    <td class="w-140 xs:w-100 pr-4 align-top">
+      <img src="{{packshot}}" alt="{{desc}}" width="100%" />
+    </td>
+
+    <!-- Desc Product -->
+    <td class="text-base xs:text-xs align-top">
+      <p class="font-bold pb-1">{{brand}}</p>
+      <p>{{desc}}</p>
+      <br />
+      <p>Taille : <span class="font-bold">{{size}}</span></p>
+      <p>Couleur : <span class="font-bold">{{color}}</span></p>
+    </td>
+
+    <!-- Price Product -->
+    <td class="text-base xs:text-xs w-20 pl-4 align-top text-right">
+      <if condition="oldPrice">
+        <p class="line-through text-gray-600 text-sm">{{oldPrice}}</p>
+      </if>
+      <p class="font-bold">{{currentPrice}}</p>
+    </td>
+  </tr>
+</table>

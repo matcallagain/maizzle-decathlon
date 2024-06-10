@@ -1,0 +1,37 @@
+---
+title: "Email - Abandoned Cart"
+preheader: "Abandoned Cart preheader..."
+---
+
+
+<x-main class="max-w-emailMaxWidth m-auto">
+
+  <!-- Header -->
+  <x-header />
+
+  <!-- [Title h1] -->
+  <x-titles.title-h1>Vos produits vous attendent dans votre panier</x-titles.title-h1>
+
+  <!-- [Edito] -->
+  <x-editos.edito-simple>
+    Bonjour %%firstname%% !<br /><br />
+    Vous avez un doute ? Ou tout simplement oublié de valider votre panier ?<br />
+    N'attendez plus, chez Decathlon les retours sont offerts pendant 365 jours.
+  </x-editos.edito-simple>
+
+  <!-- [Signature] -->
+  <x-signatures.signature-simple> {{{signature}}} </x-signatures.signature-simple>
+
+  <!-- [Cart] -->
+  <x-carts.cart-abandoned />
+
+  <!-- [Push Products] -->
+  <x-pushes.push-products />
+
+  <!-- [Need help] -->
+  <x-helps.help-simple />
+
+  <!-- [CTA Contact] -->
+  <x-helps.ctas-whatsapp-messenger />
+
+</x-main>

@@ -1,0 +1,15 @@
+<script props>
+  module.exports = {
+    brand: props.brand || "DECATHLON",
+    desc: props.desc || "Pork tenderloin bacon ham landjaeger strip steak t-bone.",
+    currentPrice: props["current-price"] || "6999€",
+  };
+</script>
+
+<!-- Packshot Product -->
+<td class="align-top px-2">
+  <img class="pb-2" src="{{packshot}}" alt="{{desc}}" width="100%" />
+  <p class="pb-2 text-base xs:text-xs text-center font-bold">{{brand}}</p>
+  <p class="pb-2 text-xs xs:text-xs text-center">{{desc}}</p>
+  <p class="text-base xs:text-xs text-center font-bold">{{currentPrice}}</p>
+</td>

@@ -1,0 +1,28 @@
+/*
+ * Here is where you can add your global email CSS resets.
+ *
+ * We use a custom, email-specific CSS reset, instead
+ * of Tailwind's web-optimized `base` layer.
+ *
+ * Styles defined here will be inlined.
+*/
+
+html{
+  font-size: 0.625em;
+  font-family: "ui-sans-serif", "system-ui", "-apple-system", '"Segoe UI"', "sans-serif";
+}
+
+*{
+  @apply m-0;
+  box-sizing: border-box;
+}
+h1, h2{
+  @apply m-0 mt-5 mb-7;
+}
+
+.fl{
+  @apply px-5;
+}
+img {
+  @apply max-w-full leading-none align-middle;
+}

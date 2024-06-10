@@ -1,0 +1,20 @@
+<script props>
+  module.exports = {
+    url: props.url || "https://decathlon.fr",
+    desc1: props["desc-1"] || "Pork tenderloin bacon ham landjaeger strip steak t-bone.",
+    desc2: props["desc-2"],
+  };
+</script>
+
+<!-- Packshot Product -->
+<td class="align-top px-0.5" width="50%">
+  <x-button class="w-[100%]" href="{{url}}" align="center" p-y="py-6" p-x="px-2" bg-color="bg-color-alt-white dark:bg-color-alt-black-dark">
+    <img class="pb-2" src="{{packshot}}" alt="{{desc}}" width="auto" height="34" />
+    <p class="pb-2 text-xs xs:text-xs text-center leading-4">
+      <span class="font-bold">{{{desc1}}}</span><br />
+      <if condition="desc2">
+        {{desc2}}
+      </if>
+    </p>
+  </x-button>
+</td>
